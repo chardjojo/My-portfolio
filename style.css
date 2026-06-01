@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0a0a0a;
+    color: white;
+}
+
+
+header {
+    background: linear-gradient(90deg, #001f3f, #0074D9);
+    text-align: center;
+    padding: 20px;
+}
+
+
+nav {
+    background-color: #001f3f;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #0074D9;
+}
+
+
+section {
+    padding: 40px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+.card {
+    background-color: #111;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 5px solid #0074D9;
+    border-radius: 10px;
+}
+
+
+.skills span {
+    display: inline-block;
+    background-color: #0074D9;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #0074D9;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #001f3f;
+}
+
+
+nav a.active {
+    color: yellow;
+}
+
+
+@media (max-width: 600px) {
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+}
+
+.cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background: white;
+    margin-left: 3px;
+    vertical-align: middle;
+    animation: blink 1s step-end infinite;
+}
+ 
+@keyframes blink {
+    50% { opacity: 0; }
+}
+ 
+
+.skill-bar {
+    height: 8px;
+    background-color: #222; 
+    border-radius: 4px;
+    margin-bottom: 14px;
+    overflow: hidden;
+}
+ 
+.skill-fill {
+    height: 100%;
+    background-color: #0074D9;  
+    border-radius: 4px;
+    width: 0%;                 
+    transition: width 1s ease;  
+}
+ 
+
+.fade-in {
+    opacity: 0;                       
+    transform: translateY(24px);      
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+ 
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
